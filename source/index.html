@@ -10,7 +10,7 @@
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header" data-test="header">
     <a class="logo" aria-current="page">
       <img class="logo__image" src="#" alt="Логотип Drink2go.">
     </a>
@@ -23,7 +23,7 @@
         Корзина
         <img src="#" alt="Корзина">
       </a>
-      <button class="header__burger header__burger--closed" type="button">
+      <button class="header__burger header__burger--closed js-toggle-button" type="button">
         <span class="visually-hidden">Открыть меню.</span>
       </button>
 
@@ -49,19 +49,44 @@
   </header>
 
   <main class="main-container">
-    <section class="slider">
-      <h1 class="visually-hidden">Кофейный напитки</h1>
-      <img class="slider__image" src="#" alt="Банка кофе Декаф Флэт Уайт.">
-      <p class="slider__badge">Новинка!</p>
-      <p class="slider__title">Декаф Флэт Уайт</p>
-      <p class="slider__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что
-        нужно для расслабления после тяжёлого рабочего дня</p>
-      <span class="slider__old-price">295₽</span>
-      <span class="slider__new-price">225₽</span>
-      <a class="button slider__button" href="#">Заказать</a>
+    <section class="slider" data-test="hero">
+      <div class="slider__container">
+        <div class="slider__slide">
+          <h1 class="visually-hidden">Кофейный напитки  Drink2Go</h1>
+          <img class="slider__image" src="#" alt="Банка кофе Декаф Флэт Уайт.">
+          <p class="slider__badge">Новинка!</p>
+          <p class="slider__title">Декаф Флэт Уайт</p>
+          <p class="slider__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что
+            нужно для расслабления после тяжёлого рабочего дня</p>
+          <span class="slider__old-price">295₽</span>
+          <span class="slider__new-price">225₽</span>
+          <a class="button slider__button" href="#">Заказать</a>
+          <button class="slider__prev-button slider-button-prev" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+          <button class="slider__next-button slider-button-next" aria-label="Посмотреть следующий слайд">&gt;</button>
+        </div>
+        <div class="slider__pagination">
+          <ul class="slider__pagination-list">
+            <li class="slider__pagination-item">
+              <a class="slider__pagination-link" href="#">
+                <span class="visually-hidden">1</span>
+              </a>
+            </li>
+            <li class="slider__pagination-item">
+              <a class="slider__pagination-link" href="#">
+                <span class="visually-hidden">2</span>
+              </a>
+            </li>
+            <li class="slider__pagination-item">
+              <a class="slider__pagination-link" href="#">
+                <span class="visually-hidden">3</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="features">
+    <section class="features" data-test="features">
       <p class="features__badge">Преимущества</p>
       <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
 
@@ -87,13 +112,13 @@
       </ul>
     </section>
 
-    <section class="catalog">
+    <section class="catalog" data-test="catalog">
       <p class="catalog__badge">Каталог</p>
       <h2 class="catalog__title">Каталог кофейных напитков</h2>
       <form class="catalog__filter" action="https://echo.htmlacademy.ru" method="get">
         <div class="catalog__price">
           <label class="catalog__price-range" for="price-range">Цена</label>
-          <input class="catalog__range-input" type="range" name="price-range">
+          <input class="catalog__range-input" type="range" id="price-range" name="price-range">
           <input class="catalog__min-price" type="text" name="min-price">
           <input class="catalog__max-price" type="text" name="max-price">
         </div>
@@ -263,11 +288,14 @@
         </ul>
       </div>
     </section>
+
+    <section class="map" data-test="map">
+      <h2 class="visually-hidden">Санкт-Петербург, набережная реки Карповки, дом 5</h2>
+      <img class="map__image" src="#" alt="Санкт-Петербург, набережная реки Карповки, дом 5.">
+    </section>
   </main>
 
-  <footer class="footer">
-    <img class="footer__map" src="#" alt="Санкт-Петербург, набережная реки Карповки, дом 5.">
-
+  <footer class="footer" data-test="footer">
     <img class="footer__logo" src="#" alt="Логотип Drink2Go.">
 
     <ul class="socials footer__socials-list">
@@ -333,7 +361,7 @@
     <a class="footer__developer" href="https://htmlacademy.ru/intensive/adaptive">Разработано в
       HTML Academy
       <img class="footer__developer-logo" src="#" alt="HTML Academy.">
-     </a>
+    </a>
   </footer>
 </body>
 
