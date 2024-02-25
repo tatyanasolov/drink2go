@@ -1,5 +1,58 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  background-color: $base-white;
+  color: $base-black;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+}
+
+.header__logo {
+  display: block;
+}
+
+.header__menu {
+  display: flex;
+  min-height: 60px;
+}
+
+.header__link {
+  display: block;
+  width: 60px;
+  min-height: 60px;
+  padding: 22px 10px;
+}
+
+.header__icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.header__text {
+  display: none;
+}
+
+.header__burger {
+  display: inline-block;
+  width: 60px;
+  min-height: 60px;
+  margin-right: -20px;
+
+  border: none;
+  background-color: $base-white;
+  background-image: url("../../images/icons/burger-icon.svg");
+  background-size: 16px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__navigation {
+  display: none;
+}
+
+.header__navigation-list {
+  @include list;
 }

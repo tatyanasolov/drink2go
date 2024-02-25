@@ -14,3 +14,13 @@ img {
 a {
   text-decoration: none;
 }
+
+.page__body {
+  margin: 0;
+
+  font-family: $montserrat-font;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: $base-white;
+  color: $base-black;
+}
