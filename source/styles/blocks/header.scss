@@ -43,6 +43,14 @@
 
   border: none;
   background-color: $base-white;
+  background-image: url("../../images/icons/close-icon.svg");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.header__burger--closed {
   background-image: url("../../images/icons/burger-icon.svg");
   background-size: 16px 12px;
   background-repeat: no-repeat;
@@ -50,9 +58,40 @@
 }
 
 .header__navigation {
+  display: block;
+
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header__navigation--closed {
   display: none;
+}
+
+.header__navigation--opened {
+  display: block
 }
 
 .header__navigation-list {
   @include list;
+}
+
+.header__navigation-item {
+  border-bottom: 1px solid $base-secondary;
+}
+
+.header__navigation-item:first-child {
+  border-top: 1px solid $base-secondary;
+}
+
+.header__navigation-wrapper {
+  padding: 0 20px;
+}
+
+.header__navigation-link {
+  display: block;
+  padding: 18px 10px;
+  color: inherit;
 }
