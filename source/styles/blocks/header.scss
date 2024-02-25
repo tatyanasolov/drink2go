@@ -1,6 +1,10 @@
 .header {
   background-color: $base-white;
   color: $base-black;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .header__main-container {
@@ -14,6 +18,12 @@
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -68,6 +78,11 @@
 
 .header__text {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    text-transform: uppercase;
+  }
 }
 
 .header__burger {
@@ -101,10 +116,8 @@
 }
 
 .header__navigation {
-  font-weight: 500;
-  font-size: 12px;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     order: 1;
@@ -163,7 +176,21 @@
   color: inherit;
 
   @media (min-width: $tablet-width) {
-    padding: 30px 21px;
+    padding: 31px 21px;
+  }
+}
+
+.header__navigation-link:hover,
+.header__navigation-link:focus {
+  @media (min-width: $tablet-width) {
+    color: $base-primary;
+  }
+}
+
+.header__navigation-link--current {
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $base-primary;
+    color: $base-primary;
   }
 }
 

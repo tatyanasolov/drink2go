@@ -1,4 +1,4 @@
-.logo {
+.logo__wrapper {
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
@@ -27,5 +27,12 @@
 
   @media (min-width: $desktop-width) {
     display: inline;
+  }
+}
+
+.logo__description {
+  display: none;
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
