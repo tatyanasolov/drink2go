@@ -3,6 +3,20 @@
   color: $base-black;
 }
 
+.header__main-container {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    min-height: 80px;
+    padding-left: 169px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -10,8 +24,20 @@
   min-height: 60px;
 }
 
+.header__wrapper {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+}
+
 .header__logo {
   display: block;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 22px;
+    left: 20px;
+  }
 }
 
 .header__menu {
@@ -24,6 +50,11 @@
   width: 60px;
   min-height: 60px;
   padding: 22px 10px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 80px;
+    padding: 32px 10px;
+  }
 }
 
 .header__link:active {
@@ -52,6 +83,10 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .header__burger--closed {
@@ -66,16 +101,22 @@
 }
 
 .header__navigation {
-  display: block;
-
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
 }
 
 .header__navigation--closed {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .header__navigation--opened {
@@ -84,24 +125,46 @@
 
 .header__navigation-list {
   @include list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
+
 
 .header__navigation-item {
   border-bottom: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .header__navigation-item:first-child {
   border-top: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .header__navigation-wrapper {
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .header__navigation-link {
   display: block;
   padding: 18px 10px;
   color: inherit;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 21px;
+  }
 }
 
 .header__navigation-wrapper:active {

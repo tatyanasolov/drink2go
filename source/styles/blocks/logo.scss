@@ -1,3 +1,31 @@
+.logo {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
 .logo__image {
   display: block;
+}
+
+.logo__tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 24px;
+  }
+}
+
+.logo__desktop {
+  display: none;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+  }
 }
