@@ -14,6 +14,12 @@
     min-height: 828px;
     background: linear-gradient(to top, $base-white 188px, $bg-flat-white 188px);
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    min-height: 714px;
+    background: $bg-flat-white;
+  }
 }
 
 .slider__image {
@@ -24,6 +30,12 @@
     width: 476px;
     height: 476px;
     margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 30px;
+    width: 600px;
+    height: 100%;
   }
 }
 
@@ -38,6 +50,11 @@
   text-align: center;
   text-transform: uppercase;
   color: $base-primary;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 150px;
+    text-align: start;
+  }
 }
 
 .slider__title {
@@ -55,6 +72,10 @@
 
     font-size: 56px;
     line-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
   }
 }
 
@@ -74,6 +95,10 @@
     font-size: 20px;
     line-height: 32px;
   }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
 }
 
 .slider__info-wrapper {
@@ -85,6 +110,10 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
@@ -118,6 +147,10 @@
     width: 80px;
     height: 640px;
   }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
 }
 
 .slider__button-icon {
@@ -126,6 +159,10 @@
 
   @media (min-width: $tablet-width) {
     top: 310px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 347px;
   }
 }
 
@@ -163,5 +200,9 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
   }
 }

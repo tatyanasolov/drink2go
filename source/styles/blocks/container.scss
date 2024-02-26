@@ -23,3 +23,9 @@
     margin: 0;
   }
 }
+
+.container--slider {
+  @media (min-width: $desktop-width) {
+padding-left: 105px;
+padding-right: 80px;  }
+}
