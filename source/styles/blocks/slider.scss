@@ -45,13 +45,6 @@
   padding: 0;
   margin-bottom: 4px;
 
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: $base-primary;
-
   @media (min-width: $desktop-width) {
     margin-top: 150px;
     text-align: start;
