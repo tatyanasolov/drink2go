@@ -279,6 +279,14 @@
     background-color: $base-primary;
   }
 }
+.slider__pagination-link:hover::before,
+.slider__pagination-link:focus-visible::before{
+  background-color: $alt-primary-opacity;
+}
+
+.slider__pagination-link:active::before {
+  background-color: $base-primary;
+}
 
 .slider__wrapper {
   @media (min-width: $tablet-width) {
