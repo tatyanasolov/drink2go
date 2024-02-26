@@ -1,0 +1,81 @@
+.slider__container {
+  position: relative;
+}
+
+.slider__slide {
+  min-height: 656px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color: $bg-flat-white;
+}
+
+.slider__image {
+  display: inline-block;
+  // margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.slider__badge {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $base-primary;
+}
+
+.slider__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.slider__text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+
+.slider__old-price {
+  font-size: 16px;
+  line-height: 200%;
+  text-decoration: line-through;
+  color: $base-primary;
+}
+
+.slider__new-price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.slider__button {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  width: 20px;
+  height: 656px;
+  background-color: transparent;
+  border: none;
+  outline: 1px solid red;
+}
+
+.slider__button--prev {
+  left: 0;
+}
+
+.slider__button--next {
+  right: 0;
+}

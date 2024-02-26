@@ -8,8 +8,9 @@
 }
 
 .header__main-container {
+  position: relative;
+
   @media (min-width: $tablet-width) {
-    position: relative;
     display: flex;
     justify-content: space-between;
     width: 768px;
@@ -58,6 +59,7 @@
   display: flex;
   flex-wrap: wrap;
   min-height: 60px;
+
   @media (min-width: $desktop-width) {
     gap: 20px;
   }
@@ -81,13 +83,15 @@
   }
 }
 
-.header__link:hover {
+.header__link:hover,
+.header__link:focus-visible {
   @media (min-width: $desktop-width) {
     color: $base-primary;
   }
 }
 
-.header__link:hover .header__icon {
+.header__link:hover .header__icon,
+.header__link:focus-visible .header__icon {
   fill: $base-primary;
 }
 
@@ -165,7 +169,12 @@
 }
 
 .header__navigation--opened {
-  display: block
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  display: block;
+  z-index: 1;
+  background-color: $base-white
 }
 
 .header__navigation-list {
