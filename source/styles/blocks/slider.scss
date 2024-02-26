@@ -34,6 +34,7 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 30px;
+    margin-left: 25px;
     width: 600px;
     height: 100%;
   }
@@ -153,6 +154,50 @@
   }
 }
 
+.slider__button--prev {
+  left: 0;
+}
+
+.slider__button--prev:not(:disabled):hover,
+.slider__button--prev:not(:disabled):focus-visible {
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
+
+.slider__button--prev:not(:disabled):active {
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+
+.slider__button--next {
+  right: 0;
+}
+
+.slider__button--next:not(:disabled):hover,
+.slider__button--next:not(:disabled):focus-visible {
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  }
+}
+
+.slider__button--next:not(:disabled):active {
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, 0.25) 100%);
+  }
+}
+
+.slider__button:disabled {
+  cursor: default;
+}
+
+.slider__button:disabled .slider__button-icon {
+  fill: $base-grey;
+}
+
 .slider__button-icon {
   position: absolute;
   top: 318px;
@@ -165,6 +210,8 @@
     top: 347px;
   }
 }
+
+
 
 .slider__button-icon--prev {
   left: 0;
@@ -184,16 +231,53 @@
   }
 }
 
-.slider__button--prev {
-  left: 0;
-}
-
-.slider__button--next {
-  right: 0;
-}
-
 .slider__pagination {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.slider__pagination-list {
+  @media (min-width: $desktop-width) {
+    @include list;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+}
+
+.slider__pagination-link {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    display: block;
+    width: 62px;
+    height: 44px;
+    background-color: transparent;
+  }
+}
+
+.slider__pagination-link::before {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 62px;
+    height: 4px;
+    background-color: $base-white;
+  }
+}
+
+.slider__pagination-link--current::before {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 62px;
+    height: 4px;
+    background-color: $base-primary;
+  }
 }
 
 .slider__wrapper {
