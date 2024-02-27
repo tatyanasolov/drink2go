@@ -92,6 +92,7 @@
 
   @media (min-width: $desktop-width) {
     text-align: start;
+    margin-bottom: 40px;
   }
 }
 
@@ -255,7 +256,7 @@
   @media (min-width: $desktop-width) {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 11px;
     width: 62px;
     height: 4px;
     background-color: $base-white;
@@ -264,14 +265,10 @@
 
 .slider__pagination-link--current::before {
   @media (min-width: $desktop-width) {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 62px;
-    height: 4px;
     background-color: $base-primary;
   }
 }
+
 .slider__pagination-link:hover::before,
 .slider__pagination-link:focus-visible::before{
   background-color: $alt-primary-opacity;

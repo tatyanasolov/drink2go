@@ -1,5 +1,5 @@
 .features {
-  padding-top: 50px;
+  padding: 50px 0 60px 0;
 
   @media (min-width: $tablet-width) {
     padding: 60px 0 100px 0;
@@ -61,6 +61,7 @@
   @media (min-width: $tablet-width) {
   font-size: 24px;
   line-height: 36px;
+  margin-bottom: 10px;
   }
 }
 
@@ -73,7 +74,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
-    gap: 50px 32px;
+    gap: 50px 30px;
     padding: 0 10px;
   }
 
@@ -86,14 +87,37 @@
 
 .features__item {
   padding-top: 66px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 52px 56px;
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
     padding-left: 72px;
+    background-position: top left;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
     padding-top: 76px;
+    background-position: top center;
   }
+}
+
+.features__item--speed {
+  background-image: url("../../images/icons/speed-icon.svg");
+
+}
+
+.features__item--fit {
+  background-image: url("../../images/icons/fit-icon.svg");
+
+}
+
+.features__item--energy {
+  background-image: url("../../images/icons/energy-icon.svg");
+}
+
+.features__item--eco {
+  background-image: url("../../images/icons/eco-icon.svg");
 }
