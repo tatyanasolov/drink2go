@@ -135,11 +135,55 @@
   background-color: $base-primary;
 }
 
-.catalog__control--checkbox:checked + .catalog__label--checkbox::before {
+.catalog__control--checkbox:checked+.catalog__label--checkbox::before {
   left: 20px;
 }
 
 .catalog__label {
   font-size: 16px;
   line-height: 24px;
+}
+
+.catalog__buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.catalog__filter-button {
+  margin-bottom: 20px;
+}
+
+.catalog__sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.catalog__subtitle--sort {
+  margin: 0;
+}
+
+.catalog__select-control {
+  padding: 4px 10px;
+  width: 165px;
+  min-height: 32px;
+
+  font-family: $montserrat-font;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-primary;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.catalog__cards-list {
+  @include list;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
 }

@@ -202,7 +202,8 @@
             <p class="catalog__subtitle">Наличие молока</p>
             <ul class="catalog__filter-list">
               <li class="catalog__filter-item">
-                <input class="catalog__control catalog__control--radio" type="radio" id="no-matter" name="milk" value="no-matter" checked>
+                <input class="catalog__control catalog__control--radio" type="radio" id="no-matter" name="milk"
+                  value="no-matter" checked>
                 <label class="catalog__label" for="no-matter">Неважно</label>
               </li>
               <li class="catalog__filter-item">
@@ -211,12 +212,13 @@
                 <label class="catalog__label" for="animal-milk-only">Только животное</label>
               </li>
               <li class="catalog__filter-item">
-                <input class="catalog__control catalog__control--radio" type="radio" id="plant-milk-only" name="milk" value="plant-milk-only">
+                <input class="catalog__control catalog__control--radio" type="radio" id="plant-milk-only" name="milk"
+                  value="plant-milk-only">
                 <label class="catalog__label" for="plant-milk-only">Только растительное</label>
               </li>
               <li class="catalog__filter-item">
-                <input class="catalog__control catalog__control--radio" type="radio" id="without-milk" name="milk" value="without-milk"
-                  disabled>
+                <input class="catalog__control catalog__control--radio" type="radio" id="without-milk" name="milk"
+                  value="without-milk" disabled>
                 <label class="catalog__label" for="without-milk">Без молока</label>
               </li>
             </ul>
@@ -225,95 +227,106 @@
             <p class="catalog__subtitle">Страна произрастания</p>
             <ul class="catalog__filter-list">
               <li class="catalog__filter-item catalog__filter-item--checkbox">
-                <input class="catalog__control catalog__control--checkbox" type="checkbox" id="brazil" name="brazil" checked>
+                <input class="catalog__control catalog__control--checkbox" type="checkbox" id="brazil" name="brazil"
+                  checked>
                 <label class="catalog__label catalog__label--checkbox" for="brazil">Бразилия</label>
               </li>
               <li class="catalog__filter-item">
-                <input class="catalog__control catalog__control--checkbox" type="checkbox" id="ethiopia" name="ethiopia">
+                <input class="catalog__control catalog__control--checkbox" type="checkbox" id="ethiopia"
+                  name="ethiopia">
                 <label class="catalog__label catalog__label--checkbox" for="ethiopia">Эфиопия</label>
               </li>
               <li class="catalog__filter-item">
-                <input class="catalog__control catalog__control--checkbox" type="checkbox" id="colombia" name="colombia">
+                <input class="catalog__control catalog__control--checkbox" type="checkbox" id="colombia"
+                  name="colombia">
                 <label class="catalog__label catalog__label--checkbox" for="colombia">Колумбия</label>
               </li>
               <li class="catalog__filter-item">
-                <input class="catalog__control catalog__control--checkbox" type="checkbox" id="costa-rica" name="costa-rica">
+                <input class="catalog__control catalog__control--checkbox" type="checkbox" id="costa-rica"
+                  name="costa-rica">
                 <label class="catalog__label catalog__label--checkbox" for="costa-rica">Коста-Рика</label>
               </li>
               <li class="catalog__filter-item">
-                <input class="catalog__control catalog__control--checkbox" type="checkbox" id="peru" name="peru" disabled>
+                <input class="catalog__control catalog__control--checkbox" type="checkbox" id="peru" name="peru"
+                  disabled>
                 <label class="catalog__label catalog__label--checkbox" for="peru">Перу</label>
               </li>
             </ul>
           </div>
-          <button class="button catalog__filter-button" type="submit">Применить</button>
-          <button class="button catalog__reset-button" type="reset">Сбросить</button>
+          <div class="catalog__buttons-wrapper">
+            <button class="button catalog__filter-button" type="submit">Применить</button>
+            <button class="button button--reset catalog__reset-button" type="reset">Сбросить</button>
+          </div>
         </form>
         <div class="catalog__cards">
-          <select class="catalog__select-control" aria-label="Сортировка.">
-            <option value="default">по умолчанию</option>
-            <option value="expensive">Сначала дорогие</option>
-            <option value="popular">Сначала популярные</option>
-          </select>
+          <div class="catalog__sort">
+            <p class="catalog__subtitle catalog__subtitle--sort">Сортировка:</p>
+            <select class="catalog__select-control" aria-label="Сортировка.">
+              <option value="default">по умолчанию</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
+            </select>
+          </div>
           <ul class="catalog__cards-list">
             <li class="card catalog__cards-item">
-              <img src="#" alt="Декаф Флэт Уайт.">
+              <img class="card__image" src="images/coffee-can-1-mobile@1x.jpg" width="130" height="188"
+                alt="Декаф Флэт Уайт." srcset="images/coffee-can-1-mobile@2x.jpg 2x">
               <p class="card__title">Декаф Флэт Уайт</p>
               <p class="card__description">Кофе без кофеина из Эфиопии
                 с натуральным фермерским молоком</p>
               <div class="card__wrapper">
                 <span class="card__price">225₽</span>
-                <a class="button card__button" href="#">В корзину</a>
+                <a class="button button--card card__button" href="#">В корзину</a>
               </div>
             </li>
             <li class="card catalog__cards-item">
-              <img src="#" alt="Декаф Флэт Уайт.">
+              <img class="card__image" src="images/coffee-can-2-mobile@1x.jpg" width="130" height="188" alt="Декаф Флэт Уайт." srcset="images/coffee-can-2-mobile@2x.jpg 2x">
               <p class="card__title">Декаф Флэт Уайт</p>
               <p class="card__description">Кофе без кофеина из Эфиопии
                 с натуральным фермерским молоком</p>
               <div class="card__wrapper">
                 <span class="card__price">225₽</span>
-                <a class="button card__button" href="#">В корзину</a>
+                <a class="button button--card card__button" href="#">В корзину</a>
               </div>
             </li>
             <li class="card catalog__cards-item">
-              <img src="#" alt="Декаф Флэт Уайт.">
+              <img class="card__image" src="images/coffee-can-3-mobile@1x.jpg" width="130" height="188" alt="Декаф Флэт Уайт." srcset="images/coffee-can-3-mobile@2x.jpg 2x">
               <p class="card__title">Декаф Флэт Уайт</p>
               <p class="card__description">Кофе без кофеина из Эфиопии
                 с натуральным фермерским молоком</p>
               <div class="card__wrapper">
                 <span class="card__price">225₽</span>
-                <a class="button card__button" href="#">В корзину</a>
+                <a class="button button--card card__button" href="#">В корзину</a>
               </div>
             </li>
             <li class="card catalog__cards-item">
-              <img src="#" alt="Декаф Флэт Уайт.">
+              <img class="card__image" src="images/coffee-can-4-mobile@1x.jpg" width="130" height="188" alt="Декаф Флэт Уайт." srcset="images/coffee-can-4-mobile@2x.jpg 2x">
               <p class="card__title">Декаф Флэт Уайт</p>
               <p class="card__description">Кофе без кофеина из Эфиопии
                 с натуральным фермерским молоком</p>
               <div class="card__wrapper">
                 <span class="card__price">225₽</span>
-                <a class="button card__button" href="#">В корзину</a>
+                <a class="button button--card card__button" href="#">В корзину</a>
               </div>
             </li>
             <li class="card catalog__cards-item">
-              <img src="#" alt="Декаф Флэт Уайт.">
+              <img class="card__image" src="images/coffee-can-5-mobile@1x.jpg" width="130" height="188" alt="Декаф Флэт Уайт." srcset="images/coffee-can-5-mobile@2x.jpg 2x">
               <p class="card__title">Декаф Флэт Уайт</p>
               <p class="card__description">Кофе без кофеина из Эфиопии
                 с натуральным фермерским молоком</p>
               <div class="card__wrapper">
                 <span class="card__price">225₽</span>
-                <a class="button card__button" href="#">В корзину</a>
+                <a class="button button--card card__button" href="#">В корзину</a>
               </div>
             </li>
             <li class="card catalog__cards-item">
-              <img src="#" alt="Декаф Флэт Уайт.">
+              <img class="card__image" src="images/coffee-can-6-mobile@1x.jpg" width="130" height="188" alt="Декаф Флэт Уайт." srcset="images/coffee-can-6-mobile@2x.jpg 2x">
               <p class="card__title">Декаф Флэт Уайт</p>
               <p class="card__description">Кофе без кофеина из Эфиопии
                 с натуральным фермерским молоком</p>
               <div class="card__wrapper">
                 <span class="card__price">225₽</span>
-                <a class="button card__button" href="#">В корзину</a>
+                <a class="button button--card card__button" href="#">В корзину</a>
               </div>
             </li>
           </ul>
