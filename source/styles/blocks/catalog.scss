@@ -293,6 +293,11 @@
   }
 }
 
+.catalog__cards-item:hover,
+.catalog__cards-item:focus-within {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
 .catalog__pagination-wrapper {
   display: flex;
   column-gap: 20px;
@@ -354,6 +359,17 @@
     background-image: none;
     transform: none;
   }
+}
+
+.catalog__pagination-link:not(.catalog__pagination-link--current):hover,
+.catalog__pagination-link:not(.catalog__pagination-link--current):focus-visible {
+  background-color: $alt-primary-lighter;
+  color: $base-white;
+}
+
+.catalog__pagination-link:not(.catalog__pagination-link--current):active {
+  background-color: $alt-primary-darker;
+  color: $base-white;
 }
 
 .catalog__pagination-text {

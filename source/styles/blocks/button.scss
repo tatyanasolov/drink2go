@@ -25,6 +25,16 @@
   color: $base-primary;
 }
 
+.button--reset:not(:disabled):hover,
+.button--reset:not(:disabled):focus-visible,
+.button--reset:not(:disabled):active {
+  color: $base-white;
+}
+
+.button--reset:disabled {
+  background-color: $alt-light-grey;
+}
+
 .button--disabled {
   background-color: $base-grey;
   cursor: default;
