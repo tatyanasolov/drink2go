@@ -18,6 +18,11 @@
   line-height: 32px;
 }
 
+.card__description {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
 .card__wrapper {
   display: flex;
   justify-content: space-between;
