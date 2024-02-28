@@ -89,6 +89,22 @@
   }
 }
 
+.catalog__price-input:not(:disabled):hover,
+.catalog__price-input:not(:disabled):focus-visible {
+  border-color: $alt-primary-darker;
+  outline: none;
+}
+
+.catalog__price-input:disabled {
+  background-color: $bg-lightest-grey;
+  border-color: $alt-light-grey;
+  color: $base-grey;
+}
+
+.catalog__price-input::placeholder {
+  color: $base-grey;
+}
+
 .catalog__number-wrapper::after {
   content: "";
   position: absolute;
@@ -172,6 +188,24 @@
   background-color: $base-primary;
 }
 
+.catalog__control--radio:hover,
+.catalog__control--radio:focus-visible {
+  border-color: $alt-primary-lighter;
+}
+
+.catalog__control--radio:not(:disabled):hover::after,
+.catalog__control--radio:not(:disabled):focus-visible::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $alt-primary-opacity;
+}
+
 .catalog__control--radio:disabled {
   background-color: $bg-lightest-grey;
   border: 2px solid $alt-light-grey;
@@ -211,6 +245,12 @@
 
 .catalog__control--checkbox:checked+.catalog__label--checkbox::before {
   left: 20px;
+}
+
+.catalog__control--checkbox:not(:disabled):hover,
+.catalog__control--checkbox:not(:disabled):focus-visible {
+  border: 2px solid $alt-primary-lighter;
+  background-color: $alt-primary-opacity;
 }
 
 .catalog__control--checkbox:disabled {
@@ -268,10 +308,16 @@
 
 .catalog__subtitle--sort {
   margin: 0;
+  margin-right: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+  }
 }
 
 .catalog__select-control {
   padding: 4px 10px;
+  padding-right: 27px;
   width: 165px;
   min-height: 32px;
 
@@ -281,9 +327,25 @@
   line-height: 24px;
   color: $base-primary;
 
+  background-image: url("../../images/icons/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  background-position: bottom 50% right 7px;
+
   border: none;
   background-color: transparent;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.catalog__select-control:hover,
+.catalog__select-control:focus-visible {
+  background-color: $base-secondary;
+}
+
+.catalog__select-control:active {
+  background-image: url("../../images/icons/select-down-arrow.svg")
 }
 
 .catalog__cards-list {
