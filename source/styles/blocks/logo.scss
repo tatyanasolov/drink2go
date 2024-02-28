@@ -47,6 +47,20 @@
   }
 }
 
+.logo--footer {
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.logo--footer .logo__description {
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    width: auto;
+  }
+}
+
 .logo--footer .logo__link {
   display: flex;
   align-items: center;
