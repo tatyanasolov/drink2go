@@ -3,7 +3,9 @@
   gap: 20px;
 }
 
-.logo__wrapper {
+.logo__link {
+  text-transform: uppercase;
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
@@ -15,7 +17,7 @@
   display: block;
 }
 
-.logo__tablet {
+.logo__first-letter {
   display: none;
 
   @media (min-width: $tablet-width) {
@@ -26,9 +28,8 @@
   }
 }
 
-.logo__desktop {
+.logo__letters {
   display: none;
-  text-transform: uppercase;
 
   @media (min-width: $desktop-width) {
     display: inline;
@@ -37,10 +38,30 @@
 
 .logo__description {
   display: none;
+
   @media (min-width: $desktop-width) {
     margin: 0;
     padding: 0;
     display: block;
     width: 134px;
+  }
+}
+
+.logo--footer .logo__link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo--footer .logo__first-letter {
+  display: inline;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+.logo--footer .logo__letters {
+  @media (min-width: $tablet-width) {
+    display: inline;
   }
 }
