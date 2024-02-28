@@ -107,6 +107,19 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $base-black;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+  }
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  color: $alt-primary-lighter;
+}
+
+.footer__link:active {
+  color: $alt-primary-darker;
 }
 
 .footer__address {
@@ -165,6 +178,24 @@
   align-items: center;
   margin-left: 3px;
   color: inherit;
+}
+
+.footer__developer-link:hover,
+.footer__developer-link:focus-visible {
+  color: $base-primary;
+}
+
+.footer__developer-link:hover .footer__developer-logo,
+.footer__developer-link:focus-visible .footer__developer-logo {
+  fill: $base-primary;
+}
+
+.footer__developer-link:active {
+  color: $alt-primary-darker;
+}
+
+.footer__developer-link:active .footer__developer-logo {
+  fill: $alt-primary-darker;
 }
 
 .footer__developer-logo {

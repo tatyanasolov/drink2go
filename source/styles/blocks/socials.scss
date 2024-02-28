@@ -14,4 +14,24 @@
   min-width: 40px;
   min-height: 40px;
   padding: 5px;
+  border-radius: 4px;
+}
+
+.socials__link:hover,
+.socials__link:focus-visible {
+  background-color: $base-secondary;
+}
+
+
+.socials__link:hover .socials__icon,
+.socials__link:focus-visible .socials__icon {
+  fill: $base-primary;
+}
+
+.socials__link:active {
+  background-color: $alt-primary-opacity;
+}
+
+.socials__link:active .socials__icon {
+  fill: $base-primary;
 }
