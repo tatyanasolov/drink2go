@@ -5,6 +5,7 @@
 
 .logo__link {
   text-transform: uppercase;
+  letter-spacing: 0.02em;
 
   @media (min-width: $tablet-width) {
     display: flex;
