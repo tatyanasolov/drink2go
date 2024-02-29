@@ -11,6 +11,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" type="module" defer></script>
+  <script src="vendor/nouislider.js"></script>
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
 </head>
 
@@ -277,14 +278,13 @@
             <div class="catalog__filter-wrapper">
               <div class="catalog__price">
                 <label class="catalog__subtitle" for="price-range">Цена</label>
-                <div class="catalog__range">
-                  <input class="catalog__range-input" type="range" id="price-range" name="price-range">
+                <div class="catalog__range range-slider" id="price-range">
                 </div>
                 <div class="catalog__number-wrapper">
                   <input class="catalog__price-input catalog__price-input--min" type="number" name="min-price"
-                    value="0">
+                    value="0" id="input-min">
                   <input class="catalog__price-input catalog__price-input--max" type="number" name="max-price"
-                    value="900">
+                    value="900" id="input-max">
                 </div>
               </div>
               <div class="catalog__milk">
