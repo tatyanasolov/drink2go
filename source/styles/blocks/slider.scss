@@ -3,6 +3,7 @@
 }
 
 .slider__slide {
+  display: none;
   min-height: 656px;
   padding-top: 20px;
   padding-bottom: 60px;
@@ -19,6 +20,34 @@
     padding-top: 30px;
     min-height: 714px;
     background: $bg-flat-white;
+  }
+}
+
+.slider__slide--active {
+  display: block;
+}
+
+.slider__slide.slide-2 {
+  background-color: $bg-lavender-latte;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to top, $base-white 188px, $bg-lavender-latte 188px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $bg-lavender-latte;
+  }
+}
+
+.slider__slide.slide-3 {
+  background-color: $bg-espresso;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to top, $base-white 188px, $bg-espresso 188px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $bg-espresso;
   }
 }
 
@@ -208,7 +237,7 @@
 
 
 .slider__button-icon--prev {
-  left: 0;
+  left: 4px;
 
   @media (min-width: $tablet-width) {
     left: 50%;
@@ -217,7 +246,7 @@
 }
 
 .slider__button-icon--next {
-  right: 0;
+  right: 4px;
 
   @media (min-width: $tablet-width) {
     right: 50%;
@@ -236,6 +265,10 @@
 .slider__pagination-list {
   @media (min-width: $desktop-width) {
     @include list;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 8px;
     justify-content: center;
