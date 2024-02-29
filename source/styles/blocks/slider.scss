@@ -89,6 +89,7 @@
   line-height: 48px;
   font-weight: 700;
   text-align: center;
+  letter-spacing: 0.02em;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 16px;
@@ -163,7 +164,6 @@
   height: 656px;
   background-color: transparent;
   border: none;
-  outline: 1px solid red;
 
   cursor: pointer;
 
@@ -237,7 +237,7 @@
 
 
 .slider__button-icon--prev {
-  left: 4px;
+  left: 0;
 
   @media (min-width: $tablet-width) {
     left: 50%;
@@ -246,7 +246,7 @@
 }
 
 .slider__button-icon--next {
-  right: 4px;
+  right: 0;
 
   @media (min-width: $tablet-width) {
     right: 50%;
@@ -296,7 +296,7 @@
   }
 }
 
-.slider__pagination-link--current::before {
+.slider__pagination-link--active::before {
   @media (min-width: $desktop-width) {
     background-color: $base-primary;
   }

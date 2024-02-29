@@ -1,30 +1,32 @@
 const slides = document.querySelectorAll('.slider__slide');
 const buttonPrev = document.querySelector('.slider-button-prev');
 const buttonNext = document.querySelector('.slider-button-next');
+const paginationButtons = document.querySelectorAll('.slider__pagination-link');
 
 let currentSlide = 0;
 
-// Disable buttons in initial position
+// Отключает кнопки в начальной позиции
 buttonPrev.disabled = true;
 
-// Function to show slide
+// показать слайд
 const showSlide = () => {
   slides.forEach((slide, index) => {
     if (index === currentSlide) {
       slide.classList.add('slider__slide--active');
+      paginationButtons[index].classList.add('slider__pagination-link--active');
     } else {
       slide.classList.remove('slider__slide--active');
+      paginationButtons[index].classList.remove('slider__pagination-link--active');
     }
   });
 
-  // Check if it's first slide to disable prev button
+  // активировать или дезактивировать кнопки в зависимости от текущего слайда
   if (currentSlide === 0) {
     buttonPrev.disabled = true;
   } else {
     buttonPrev.disabled = false;
   }
 
-  // Check if it's last slide to disable next button
   if (currentSlide === slides.length - 1) {
     buttonNext.disabled = true;
   } else {
@@ -32,7 +34,6 @@ const showSlide = () => {
   }
 };
 
-// Function to show next slide
 const onNextButtonClick = () => {
   if (currentSlide < slides.length - 1) {
     currentSlide++;
@@ -40,7 +41,6 @@ const onNextButtonClick = () => {
   }
 };
 
-// Function to show previous slide
 const onPrevButtonClick = () => {
   if (currentSlide > 0) {
     currentSlide--;
@@ -48,13 +48,18 @@ const onPrevButtonClick = () => {
   }
 };
 
-// Event listener for next button click
-buttonNext.addEventListener('click', onNextButtonClick);
+const onPaginationButtonClick = (index) => {
+  currentSlide = index;
+  showSlide();
+};
 
-// Event listener for previous button click
+buttonNext.addEventListener('click', onNextButtonClick);
 buttonPrev.addEventListener('click', onPrevButtonClick);
 
-// Show initial slide
-// showSlide();s
+paginationButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    onPaginationButtonClick(index);
+  });
+});
 
 export { showSlide };
