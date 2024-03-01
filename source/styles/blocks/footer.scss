@@ -98,15 +98,20 @@
   @include list;
 }
 
+.footer__item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
 .footer__link {
   display: block;
   padding: 8px 0px;
 
   font-weight: 500;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 16px;
   text-transform: uppercase;
   color: $base-black;
+  letter-spacing: 0.02em;
 
   @media (min-width: $desktop-width) {
     display: inline-block;

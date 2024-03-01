@@ -17,6 +17,14 @@
   cursor: pointer;
 }
 
+.range-slider .noUi-handle.noUi-handle-upper {
+  right: -8px;
+}
+
+.range-slider .noUi-handle.noUi-handle-lower {
+  right: -24px;
+}
+
 .range-slider .noUi-connect {
   height: 4px;
   background: $alt-primary-lighter;

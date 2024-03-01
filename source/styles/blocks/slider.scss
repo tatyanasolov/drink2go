@@ -143,6 +143,7 @@
 }
 
 .slider__old-price {
+  margin-right: 3px;
 
   font-size: 16px;
   line-height: 200%;
@@ -303,7 +304,7 @@
 }
 
 .slider__pagination-link:hover::before,
-.slider__pagination-link:focus-visible::before{
+.slider__pagination-link:focus-visible::before {
   background-color: $alt-primary-opacity;
 }
 

@@ -68,7 +68,7 @@
 
 .catalog__range-wrapper {
   height: 24px;
-  padding-top: 12px;
+  padding-top: 10px;
   margin-bottom: 24px;
 }
 
@@ -316,6 +316,7 @@
 .catalog__subtitle--sort {
   margin: 0;
   margin-right: 8px;
+  margin-left: 3px;
 
   @media (min-width: $tablet-width) {
     margin-right: 10px;
@@ -337,7 +338,7 @@
   background-image: url("../../images/icons/select-arrow.svg");
   background-repeat: no-repeat;
   background-size: 10px 10px;
-  background-position: bottom 50% right 7px;
+  background-position: bottom 50% right 10px;
 
   border: none;
   background-color: transparent;
