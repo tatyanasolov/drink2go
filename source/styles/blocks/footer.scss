@@ -1,7 +1,7 @@
 .footer__container {
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 40px 20px 0 20px;
+    padding: 40px 20px 0;
     margin-left: auto;
     margin-right: auto;
   }
@@ -95,7 +95,7 @@
 }
 
 .footer__title--contacts {
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .footer__list {
@@ -108,7 +108,7 @@
 
 .footer__link {
   display: block;
-  padding: 8px 0px;
+  padding: 8px 0;
 
   font-weight: 500;
   font-size: 12px;
@@ -163,20 +163,20 @@
 .footer__developers-wrapper {
   width: 320px;
   margin: 0 auto;
-  padding: 20px 20px 30px 20px;
+  padding: 20px 20px 30px;
   display: flex;
   justify-content: center;
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 30px 20px 40px 20px;
+    padding: 30px 20px 40px;
     margin-left: auto;
     margin-right: auto;
   }
 
   @media (min-width: $desktop-width) {
     width: 1440px;
-    padding: 20px 40px 40px 40px;
+    padding: 20px 40px 40px;
   }
 }
 

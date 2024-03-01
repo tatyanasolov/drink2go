@@ -11,12 +11,12 @@
   cursor: pointer;
 }
 
-.button:not(:disabled, .button--disabled):hover,
-.button:not(:disabled, .button--disabled):focus-visible {
+.button:not(:disabled):hover,
+.button:not(:disabled):focus-visible {
   background-color: $alt-primary-lighter;
 }
 
-.button:not(:disabled, .button--disabled):active {
+.button:not(:disabled):active {
   background-color: $alt-primary-darker;
 }
 

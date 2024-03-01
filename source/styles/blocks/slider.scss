@@ -186,7 +186,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 714px;
     height: 100%;
   }
 }
@@ -198,7 +197,7 @@
 .slider__button--prev:not(:disabled):hover,
 .slider__button--prev:not(:disabled):focus-visible {
   @media (min-width: $tablet-width) {
-    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(90deg, $base-white 0%, rgba(255, 255, 255, 0) 100%);
   }
 }
 
@@ -217,7 +216,7 @@
 .slider__button--next:not(:disabled):hover,
 .slider__button--next:not(:disabled):focus-visible {
   @media (min-width: $tablet-width) {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, $base-white 100%);
   }
 }
 
@@ -247,8 +246,6 @@
     top: 347px;
   }
 }
-
-
 
 .slider__button-icon--prev {
   left: 0;

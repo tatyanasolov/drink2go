@@ -1,12 +1,12 @@
 .features {
-  padding: 50px 0 60px 0;
+  padding: 50px 0 60px;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 0 100px 0;
+    padding: 60px 0 100px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 100px 0 120px 0;
+    padding: 100px 0 120px;
   }
 }
 
@@ -59,9 +59,9 @@
   line-height: 32px;
 
   @media (min-width: $tablet-width) {
-  font-size: 24px;
-  line-height: 36px;
-  margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
   }
 }
 
@@ -106,12 +106,10 @@
 
 .features__item--speed {
   background-image: url("../../images/icons/stack.svg#speed-icon");
-
 }
 
 .features__item--fit {
   background-image: url("../../images/icons/stack.svg#fit-icon");
-
 }
 
 .features__item--energy {
