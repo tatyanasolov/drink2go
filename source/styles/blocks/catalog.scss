@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 100pxs;
+    padding-top: 100px;
     padding-bottom: 120px;
   }
 }
@@ -43,6 +43,8 @@
   @media (min-width: $tablet-width) {
     font-size: 42px;
     line-height: 64px;
+
+    margin-bottom: 36px;
   }
 }
 
@@ -74,6 +76,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
 }
 
 .catalog__price-input {
@@ -103,7 +109,7 @@
 
 .catalog__price-input::-webkit-outer-spin-button,
 .catalog__price-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 .catalog__price-input:not(:disabled):hover,
@@ -152,6 +158,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 318px;
+    margin-top: 4px;
   }
 }
 
@@ -300,6 +307,10 @@
     flex-direction: row;
     justify-content: center;
   }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+   }
 }
 
 .catalog__filter-button {
@@ -309,6 +320,16 @@
     margin-bottom: 0;
     margin-right: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+   min-width: 149px;
+  }
+}
+
+.catalog__reset-button {
+  @media (min-width: $desktop-width) {
+    min-width: 149px;
+   }
 }
 
 .catalog__sort {
@@ -381,6 +402,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(3, 317px);
+    margin-bottom: 60px;
   }
 }
 

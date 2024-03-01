@@ -23,6 +23,10 @@
   @media (min-width: $tablet-width) {
     right: -2px;
   }
+
+  @media (min-width: $desktop-width) {
+    right: -12px;
+  }
 }
 
 .range-slider .noUi-handle.noUi-handle-lower {
