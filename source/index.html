@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -31,17 +35,17 @@
           </div>
           <div class="header__menu">
             <a class="header__link" href="#">
-              <svg class="header__icon" width="16" height="16" fill="#333333">
+              <svg class="header__icon" width="16" height="16" fill="#333333" role="img"
+              aria-label="Войти">
                 <use href="images/icons/stack.svg#user-icon"></use>
               </svg>
-              <span class="visually-hidden">Войти</span>
               <span class="header__text">Войти</span>
             </a>
             <a class="header__link" href="#">
-              <svg class="header__icon" width="16" height="16" fill="#333333">
+              <svg class="header__icon" width="16" height="16" fill="#333333" role="img"
+              aria-label=Корзина>
                 <use href="images/icons/stack.svg#basket-icon"></use>
               </svg>
-              <span class="visually-hidden">Корзина</span>
               <span class="header__text">Корзина</span>
             </a>
             <button class="header__burger header__burger--closed js-toggle-button" type="button">
@@ -80,8 +84,9 @@
   </header>
 
   <main class="main-container page__main-container">
+    <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
     <section class="slider" data-test="hero">
-      <h1 class="visually-hidden">Кофейный напитки Drink2Go</h1>
+      <h2 class="visually-hidden">Drink2Go</h2>
       <div class="slider__container">
         <div class="slider__slide slider__slide--active slide-1">
           <div class="container container--slider">
@@ -196,13 +201,15 @@
         </div>
         <button class="slider__button slider__button--prev slider-button-prev" type="button"
           aria-label="Посмотреть предыдущий слайд">
-          <svg class="slider__button-icon slider__button-icon--prev" width="20" height="20" fill="#7859CF">
+          <svg class="slider__button-icon slider__button-icon--prev" width="20" height="20" fill="#7859CF" role="img"
+          aria-label="предыдущий слайд">
             <use href="images/icons/stack.svg#prev-slide-button"></use>
           </svg>
         </button>
         <button class="slider__button slider__button--next slider-button-next" type="button"
           aria-label="Посмотреть следующий слайд">
-          <svg class="slider__button-icon slider__button-icon--next" width="20" height="20" fill="#7859CF">
+          <svg class="slider__button-icon slider__button-icon--next" width="20" height="20" fill="#7859CF" role="img"
+          aria-label="следующий слайд">
             <use href="images/icons/stack.svg#next-slide-button"></use>
           </svg>
         </button>
@@ -487,7 +494,8 @@
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <span class="visually-hidden">Вконтакте</span>
-                <svg class="socials__icon" width="20" height="20" fill="#BDBDBD">
+                <svg class="socials__icon" width="20" height="20" fill="#BDBDBD" role="img"
+                aria-label="Вконтакте">
                   <use href="images/icons/stack.svg#vk-icon"></use>
                 </svg>
               </a>
@@ -495,7 +503,8 @@
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <span class="visually-hidden">Pinterest</span>
-                <svg class="socials__icon" fill="#BDBDBD" width="22" height="22">
+                <svg class="socials__icon" fill="#BDBDBD" width="22" height="22" role="img"
+                aria-label="Pinterest">
                   <use href="images/icons/stack.svg#pinterest-icon"></use>
                 </svg>
               </a>
@@ -503,7 +512,8 @@
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <span class="visually-hidden">Одноклассники</span>
-                <svg class="socials__icon" width="20" height="20" fill="#BDBDBD">
+                <svg class="socials__icon" width="20" height="20" fill="#BDBDBD" role="img"
+                aria-label="Одноклассники">
                   <use href="images/icons/stack.svg#ok-icon"></use>
                 </svg>
               </a>
@@ -560,7 +570,8 @@
       <p class="footer__developer">Разработано в
         <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
-          <svg class="footer__developer-logo" width="12" height="16" fill="#BDBDBD">
+          <svg class="footer__developer-logo" width="12" height="16" fill="#BDBDBD" role="img"
+          aria-label="HTML Academy">
             <use href="images/icons/stack.svg#html-academy-logo"></use>
           </svg>
         </a>
