@@ -86,8 +86,11 @@
   padding: 0;
   margin-bottom: 12px;
 
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 700;
-  color: $base-primary
+  color: $base-primary;
+  letter-spacing: 0.02em;
 }
 
 .footer__title--contacts {
@@ -130,6 +133,8 @@
 .footer__address {
   margin-bottom: 16px;
   padding-left: 19px;
+  font-size: 14px;
+  line-height: 20px;
   font-style: normal;
 
   background-image: url("../../images/icons/stack.svg#address-icon");
@@ -141,11 +146,17 @@
 .footer__tel {
   color: $base-black;
   padding-left: 19px;
+  font-size: 14px;
+  line-height: 20px;
 
   background-image: url("../../images/icons/stack.svg#phone-icon");
   background-repeat: no-repeat;
   background-position: left 2px;
   background-size: 12px 16px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .footer__developers-wrapper {

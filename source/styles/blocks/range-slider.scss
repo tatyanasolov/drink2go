@@ -19,6 +19,10 @@
 
 .range-slider .noUi-handle.noUi-handle-upper {
   right: -8px;
+
+  @media (min-width: $tablet-width) {
+    right: -2px;
+  }
 }
 
 .range-slider .noUi-handle.noUi-handle-lower {

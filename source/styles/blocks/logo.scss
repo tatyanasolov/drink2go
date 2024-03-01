@@ -66,6 +66,10 @@
   display: flex;
   align-items: center;
   gap: 6px;
+
+  @media (min-width: $tablet-width) {
+  letter-spacing: 0.04em;
+  }
 }
 
 .logo--footer .logo__first-letter {
