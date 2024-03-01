@@ -38,6 +38,7 @@
 .header__wrapper {
   @media (min-width: $tablet-width) {
     order: 2;
+    flex-shrink: 0;
   }
 }
 
@@ -60,8 +61,13 @@
   flex-wrap: wrap;
   min-height: 60px;
 
+  @media (min-width: $tablet-width) {
+    max-width: 130px;
+  }
+
   @media (min-width: $desktop-width) {
     gap: 20px;
+    max-width: 280px;
   }
 }
 
@@ -153,10 +159,13 @@
 
   @media (min-width: $tablet-width) {
     order: 1;
+    max-width: 400px;
+    flex-shrink: 0;
   }
 
   @media (min-width: $desktop-width) {
     margin-left: 154px;
+    max-width: 470px;
   }
 }
 
@@ -170,7 +179,6 @@
 
 .header__navigation--opened {
   position: absolute;
-  top: 60px;
   width: 100%;
   display: block;
   z-index: 1;
