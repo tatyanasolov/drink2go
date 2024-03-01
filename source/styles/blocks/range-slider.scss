@@ -26,11 +26,15 @@
 }
 
 .range-slider .noUi-connect {
+  border-radius: 0;
+}
+
+.range-slider .noUi-connect {
   height: 4px;
   background: $alt-primary-lighter;
 }
 
-.range-slider .noUi-active {
+.range-slider .noUi-active:active {
   border: 2px solid $base-primary;
   box-shadow: none;
 }
@@ -41,19 +45,7 @@
   display: none;
 }
 
-.range-slider .noUi-touch-area:hover::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: $alt-primary-opacity;
-}
-
-.range-slider .noUi-active::after {
+.range-slider .noUi-active:active .noUi-touch-area::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -64,6 +56,19 @@
   border-radius: 50%;
   background-color: $base-primary;
   }
+
+.range-slider .noUi-touch-area:hover::after,
+.range-slider .noUi-handle:focus-visible .noUi-touch-area::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $alt-primary-opacity;
+}
 
   [disabled] .noUi-connect {
     background: $base-grey;

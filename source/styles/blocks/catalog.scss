@@ -85,6 +85,7 @@
 
   border: 2px solid $alt-primary-lighter;
   border-radius: 4px;
+  appearance: none;
 
   @media (min-width: $tablet-width) {
     width: 87px;
@@ -94,6 +95,11 @@
   @media (min-width: $desktop-width) {
     width: 134px;
   }
+}
+
+.catalog__price-input::-webkit-outer-spin-button,
+.catalog__price-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .catalog__price-input:not(:disabled):hover,
