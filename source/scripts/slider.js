@@ -57,7 +57,8 @@ buttonNext.addEventListener('click', onNextButtonClick);
 buttonPrev.addEventListener('click', onPrevButtonClick);
 
 paginationButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (evt) => {
+    evt.preventDefault();
     onPaginationButtonClick(index);
   });
 });

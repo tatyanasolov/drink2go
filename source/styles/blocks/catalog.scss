@@ -341,7 +341,7 @@
   line-height: 24px;
   color: $base-primary;
 
-  background-image: url("../../images/icons/select-arrow.svg");
+  background-image: url("../../images/icons/stack.svg#select-arrow");
   background-repeat: no-repeat;
   background-size: 10px 10px;
   background-position: bottom 50% right 10px;
@@ -359,7 +359,7 @@
 }
 
 .catalog__select-control:active {
-  background-image: url("../../images/icons/select-down-arrow.svg")
+  background-image: url("../../images/icons/stack.svg#select-down-arrow")
 }
 
 .catalog__cards-list {
@@ -421,7 +421,7 @@
 }
 
 .catalog__pagination-link--prev {
-  background-image: url(../../images/icons/pagination-arrow.svg);
+  background-image: url("../../images/icons/stack.svg#pagination-arrow");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px 10px;
@@ -433,7 +433,7 @@
 }
 
 .catalog__pagination-link--next {
-  background-image: url(../../images/icons/pagination-arrow.svg);
+  background-image: url("../../images/icons/stack.svg#pagination-arrow");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px 10px;
