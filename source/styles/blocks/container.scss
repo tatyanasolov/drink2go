@@ -16,14 +16,6 @@
   }
 }
 
-.container--header {
-  @media (min-width: $tablet-width) {
-    width: auto;
-    padding: 0;
-    margin: 0;
-  }
-}
-
 .container--slider {
   @media (min-width: $desktop-width) {
     padding-left: 80px;

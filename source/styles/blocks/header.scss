@@ -13,18 +13,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    width: 768px;
     min-height: 80px;
-    padding-left: 169px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 1440px;
-    padding-left: 364px;
-    padding-right: 40px;
   }
 }
 
@@ -33,26 +22,20 @@
   justify-content: space-between;
   align-items: center;
   min-height: 60px;
-}
 
-.header__wrapper {
   @media (min-width: $tablet-width) {
-    order: 2;
-    flex-shrink: 0;
+    justify-content: start;
   }
 }
 
 .header__logo {
-  display: block;
-
   @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 22px;
-    left: 20px;
+    margin-right: 67px;
+    flex-shrink: 0;
   }
 
   @media (min-width: $desktop-width) {
-    left: 40px;
+    margin-right: 156px;
   }
 }
 
@@ -60,14 +43,18 @@
   display: flex;
   flex-wrap: wrap;
   min-height: 60px;
+  max-width: 250px;
 
   @media (min-width: $tablet-width) {
     max-width: 130px;
+    margin-left: auto;
+    flex-shrink: 0;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 20px;
+    gap: 22px;
     max-width: 280px;
+    min-width: 262px;
   }
 }
 
@@ -157,20 +144,15 @@
 .header__navigation {
   text-align: center;
   text-transform: uppercase;
+}
 
+.header__navigation--mobile {
   @media (min-width: $tablet-width) {
-    order: 1;
-    max-width: 400px;
-    flex-shrink: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-left: 154px;
-    max-width: 470px;
+    display: none;
   }
 }
 
-.header__navigation--closed {
+.header__navigation--tablet {
   display: none;
 
   @media (min-width: $tablet-width) {
@@ -178,8 +160,14 @@
   }
 }
 
+.header__navigation--closed {
+  display: none;
+}
+
 .header__navigation--opened {
   position: absolute;
+  left: 0;
+  top: 100%;
   width: 100%;
   display: block;
   z-index: 1;
@@ -230,7 +218,8 @@
   color: inherit;
 
   @media (min-width: $tablet-width) {
-    padding: 31px 21px;
+    padding: 30px 20px;
+    letter-spacing: 0.02em;
   }
 }
 

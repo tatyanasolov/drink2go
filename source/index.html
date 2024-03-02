@@ -22,7 +22,7 @@
   <header class="header" data-test="header">
 
     <div class="header__main-container">
-      <div class="container container--header header__wrapper">
+      <div class="container">
         <div class="header__container">
           <div class="logo header__logo">
             <a class="logo__link" href="#" aria-current="page">
@@ -33,19 +33,36 @@
             <p class="logo__description">Интернет-магазин
               кофейных напитков</p>
           </div>
+          <nav class="header__navigation header__navigation--tablet">
+            <ul class="header__navigation-list">
+              <li class="header__navigation-item">
+                <a class="header__navigation-link header__navigation-link--current" href="#"
+                  aria-current="page">Главная</a>
+              </li>
+              <li class="header__navigation-item">
+                <a class="header__navigation-link" href="#">Каталог</a>
+              </li>
+              <li class="header__navigation-item">
+                <a class="header__navigation-link" href="#">Доставка</a>
+              </li>
+              <li class="header__navigation-item">
+                <a class="header__navigation-link" href="#">О нас</a>
+              </li>
+            </ul>
+          </nav>
           <div class="header__menu">
             <a class="header__link" href="#">
-              <svg class="header__icon" width="16" height="16" fill="#333333" role="img"
-              aria-label="Войти">
+              <svg class="header__icon" width="16" height="16" fill="#333333" role="img">
                 <use href="images/icons/stack.svg#user-icon"></use>
               </svg>
+              <span class="visually-hidden">Войти</span>
               <span class="header__text">Войти</span>
             </a>
             <a class="header__link" href="#">
-              <svg class="header__icon" width="16" height="16" fill="#333333" role="img"
-              aria-label=Корзина>
+              <svg class="header__icon" width="16" height="16" fill="#333333" role="img">
                 <use href="images/icons/stack.svg#basket-icon"></use>
               </svg>
+              <span class="visually-hidden">Корзина</span>
               <span class="header__text">Корзина</span>
             </a>
             <button class="header__burger header__burger--closed js-toggle-button" type="button">
@@ -54,7 +71,7 @@
           </div>
         </div>
       </div>
-      <nav class="header__navigation header__navigation--closed">
+      <nav class="header__navigation header__navigation--mobile header__navigation--closed">
         <ul class="header__navigation-list">
           <li class="header__navigation-item">
             <div class="header__navigation-wrapper">
@@ -201,15 +218,13 @@
         </div>
         <button class="slider__button slider__button--prev slider-button-prev" type="button"
           aria-label="Посмотреть предыдущий слайд">
-          <svg class="slider__button-icon slider__button-icon--prev" width="20" height="20" fill="#7859CF" role="img"
-          aria-label="предыдущий слайд">
+          <svg class="slider__button-icon slider__button-icon--prev" width="20" height="20" fill="#7859CF" role="img">
             <use href="images/icons/stack.svg#prev-slide-button"></use>
           </svg>
         </button>
         <button class="slider__button slider__button--next slider-button-next" type="button"
           aria-label="Посмотреть следующий слайд">
-          <svg class="slider__button-icon slider__button-icon--next" width="20" height="20" fill="#7859CF" role="img"
-          aria-label="следующий слайд">
+          <svg class="slider__button-icon slider__button-icon--next" width="20" height="20" fill="#7859CF" role="img">
             <use href="images/icons/stack.svg#next-slide-button"></use>
           </svg>
         </button>
@@ -494,8 +509,7 @@
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <span class="visually-hidden">Вконтакте</span>
-                <svg class="socials__icon" width="20" height="20" fill="#BDBDBD" role="img"
-                aria-label="Вконтакте">
+                <svg class="socials__icon" width="20" height="20" fill="#BDBDBD" role="img">
                   <use href="images/icons/stack.svg#vk-icon"></use>
                 </svg>
               </a>
@@ -503,8 +517,7 @@
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <span class="visually-hidden">Pinterest</span>
-                <svg class="socials__icon" fill="#BDBDBD" width="22" height="22" role="img"
-                aria-label="Pinterest">
+                <svg class="socials__icon" fill="#BDBDBD" width="22" height="22" role="img">
                   <use href="images/icons/stack.svg#pinterest-icon"></use>
                 </svg>
               </a>
@@ -512,8 +525,7 @@
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <span class="visually-hidden">Одноклассники</span>
-                <svg class="socials__icon" width="20" height="20" fill="#BDBDBD" role="img"
-                aria-label="Одноклассники">
+                <svg class="socials__icon" width="20" height="20" fill="#BDBDBD" role="img">
                   <use href="images/icons/stack.svg#ok-icon"></use>
                 </svg>
               </a>
@@ -570,8 +582,7 @@
       <p class="footer__developer">Разработано в
         <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
-          <svg class="footer__developer-logo" width="12" height="16" fill="#BDBDBD" role="img"
-          aria-label="HTML Academy">
+          <svg class="footer__developer-logo" width="12" height="16" fill="#BDBDBD" role="img">
             <use href="images/icons/stack.svg#html-academy-logo"></use>
           </svg>
         </a>

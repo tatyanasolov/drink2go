@@ -18,6 +18,7 @@
 
 .footer__wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 320px;
   padding: 20px;
@@ -160,12 +161,22 @@
   }
 }
 
+.footer__tel:hover,
+.footer__tel:focus-visible {
+  color: $alt-primary-lighter;
+}
+
+.footer__tel:active {
+  color: $alt-primary-darker;
+}
+
 .footer__developers-wrapper {
   width: 320px;
   margin: 0 auto;
   padding: 20px 20px 30px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     width: 768px;
