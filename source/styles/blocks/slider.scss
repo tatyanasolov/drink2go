@@ -1,0 +1,334 @@
+.slider__container {
+  position: relative;
+}
+
+.slider__slide {
+  display: none;
+  min-height: 656px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color: $bg-flat-white;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 0;
+    min-height: 828px;
+    background: linear-gradient(to top, $base-white 188px, $bg-flat-white 188px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    padding-bottom: 84px;
+    min-height: 714px;
+    background: $bg-flat-white;
+  }
+}
+
+.slider__slide--active {
+  display: block;
+}
+
+.slider__slide.slide-2 {
+  background-color: $bg-lavender-latte;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to top, $base-white 188px, $bg-lavender-latte 188px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $bg-lavender-latte;
+  }
+}
+
+.slider__slide.slide-3 {
+  background-color: $bg-espresso;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to top, $base-white 188px, $bg-espresso 188px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $bg-espresso;
+  }
+}
+
+.slider__image {
+  display: block;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 25px;
+    width: 600px;
+    height: 100%;
+  }
+}
+
+.slider__description-wrapper {
+  @media (min-width: $tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-left: 30px;
+    max-width: 630px;
+  }
+}
+
+.slider__badge {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 150px;
+    text-align: start;
+  }
+}
+
+.slider__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.slider__text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    min-width: 200px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+    margin-bottom: 40px;
+  }
+}
+
+.slider__info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 230px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-bottom: 100px;
+  }
+}
+
+.slider__old-price {
+  margin-right: 3px;
+
+  font-size: 16px;
+  line-height: 200%;
+  text-decoration: line-through;
+  color: $base-primary;
+}
+
+.slider__new-price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.slider__button {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  width: 20px;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: calc(100% - 188px);
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+}
+
+.slider__button--prev {
+  left: 0;
+}
+
+.slider__button--prev:not(:disabled):hover,
+.slider__button--prev:not(:disabled):focus-visible {
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(90deg, $base-white 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
+
+.slider__button--prev:not(:disabled):active {
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+
+.slider__button--next {
+  right: 0;
+}
+
+.slider__button--next:not(:disabled):hover,
+.slider__button--next:not(:disabled):focus-visible {
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, $base-white 100%);
+  }
+}
+
+.slider__button--next:not(:disabled):active {
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, 0.25) 100%);
+  }
+}
+
+.slider__button:disabled {
+  cursor: default;
+}
+
+.slider__button:disabled .slider__button-icon {
+  fill: $base-grey;
+}
+
+.slider__button-icon {
+  position: absolute;
+  top: 318px;
+
+  @media (min-width: $tablet-width) {
+    top: 310px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 347px;
+  }
+}
+
+.slider__button-icon--prev {
+  left: 0;
+
+  @media (min-width: $tablet-width) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.slider__button-icon--next {
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.slider__pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.slider__pagination-list {
+  @media (min-width: $desktop-width) {
+    @include list;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+}
+
+.slider__pagination-link {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    display: block;
+    width: 62px;
+    height: 44px;
+    background-color: transparent;
+  }
+}
+
+.slider__pagination-link::before {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    top: 11px;
+    width: 62px;
+    height: 4px;
+    background-color: $base-white;
+  }
+}
+
+.slider__pagination-link--active::before {
+  @media (min-width: $desktop-width) {
+    background-color: $base-primary;
+  }
+}
+
+.slider__pagination-link:hover::before,
+.slider__pagination-link:focus-visible::before {
+  background-color: $alt-primary-opacity;
+}
+
+.slider__pagination-link:active::before {
+  background-color: $base-primary;
+}
+
+.slider__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}

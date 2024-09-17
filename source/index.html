@@ -1,13 +1,619 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body class="page__body">
+  <header class="header" data-test="header">
+
+    <div class="header__main-container">
+      <div class="container">
+        <div class="header__container">
+          <div class="logo header__logo">
+            <a class="logo__link" href="#" aria-current="page">
+              <span class="logo__first-letter">D<span class="logo__letters">rink</span></span>
+              <img class="logo__image" src="./images/logo-mobile.svg" width="32" height="36" alt="Логотип Drink2go.">
+              <span class="logo__first-letter">G<span class="logo__letters">o</span></span>
+            </a>
+            <p class="logo__description">Интернет-магазин
+              кофейных напитков</p>
+          </div>
+          <nav class="header__navigation header__navigation--tablet">
+            <ul class="header__navigation-list">
+              <li class="header__navigation-item">
+                <a class="header__navigation-link header__navigation-link--current" href="#"
+                  aria-current="page">Главная</a>
+              </li>
+              <li class="header__navigation-item">
+                <a class="header__navigation-link" href="#">Каталог</a>
+              </li>
+              <li class="header__navigation-item">
+                <a class="header__navigation-link" href="#">Доставка</a>
+              </li>
+              <li class="header__navigation-item">
+                <a class="header__navigation-link" href="#">О нас</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__menu">
+            <a class="header__link" href="#">
+              <svg class="header__icon" width="16" height="16" fill="#333333" role="img">
+                <use href="images/icons/stack.svg#user-icon"></use>
+              </svg>
+              <span class="visually-hidden">Войти</span>
+              <span class="header__text">Войти</span>
+            </a>
+            <a class="header__link" href="#">
+              <svg class="header__icon" width="16" height="16" fill="#333333" role="img">
+                <use href="images/icons/stack.svg#basket-icon"></use>
+              </svg>
+              <span class="visually-hidden">Корзина</span>
+              <span class="header__text">Корзина</span>
+            </a>
+            <button class="header__burger header__burger--closed js-toggle-button" type="button">
+              <span class="visually-hidden">Открыть меню.</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <nav class="header__navigation header__navigation--mobile header__navigation--closed">
+        <ul class="header__navigation-list">
+          <li class="header__navigation-item">
+            <div class="header__navigation-wrapper">
+              <a class="header__navigation-link header__navigation-link--current" href="#"
+                aria-current="page">Главная</a>
+            </div>
+          </li>
+          <li class="header__navigation-item">
+            <div class="header__navigation-wrapper">
+              <a class="header__navigation-link" href="#">Каталог</a>
+            </div>
+          </li>
+          <li class="header__navigation-item">
+            <div class="header__navigation-wrapper">
+              <a class="header__navigation-link" href="#">Доставка</a>
+            </div>
+          </li>
+          <li class="header__navigation-item">
+            <div class="header__navigation-wrapper">
+              <a class="header__navigation-link" href="#">О нас</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <main class="main-container page__main-container">
+    <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
+    <section class="slider" data-test="hero">
+      <h2 class="visually-hidden">Drink2Go</h2>
+      <div class="slider__container">
+        <div class="slider__slide slider__slide--active slide-1">
+          <div class="container container--slider">
+            <div class="slider__wrapper">
+              <div class="slider__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="images/slider/flat-white-desktop@1x.webp 1x, images/slider/flat-white-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="images/slider/flat-white-tablet@1x.webp 1x, images/slider/flat-white-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="images/slider/flat-white-mobile@1x.webp 1x, images/slider/flat-white-mobile@2x.webp 2x">
+                  <source type="image/png" media="(min-width: 1440px)"
+                    srcset="images/slider/flat-white-desktop@1x.png 1x, images/slider/flat-white-desktop@2x.png 2x">
+                  <source type="image/png" media="(min-width: 768px)"
+                    srcset="images/slider/flat-white-tablet@1x.png 1x, images/slider/flat-white-tablet@2x.png 2x">
+                  <img class="slider__image" src="images/slider/flat-white-mobile@1x.png" width="280" height="280"
+                    alt="Банка кофе Декаф Флэт Уайт." srcset="images/slider/flat-white-mobile@2x.png 2x">
+                </picture>
+              </div>
+              <div class="slider__description-wrapper">
+                <p class="badge slider__badge">Новинка!</p>
+                <p class="slider__title">Декаф Флэт Уайт</p>
+                <p class="slider__text">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским
+                  молоком
+                  — то,
+                  что
+                  нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                <div class="slider__info-wrapper">
+                  <div class="slider__price-wrapper">
+                    <span class="slider__old-price">295₽</span>
+                    <span class="slider__new-price">225₽</span>
+                  </div>
+                  <a class="button slider__order-button" href="#">Заказать</a>
+                  <!-- класс для кнопки button- - disabled -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__slide slide-2">
+          <div class="container container--slider">
+            <div class="slider__wrapper">
+              <div class="slider__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="images/slider/lavender-desktop@1x.webp 1x, images/slider/lavender-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="images/slider/lavender-tablet@1x.webp 1x, images/slider/lavender-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="images/slider/lavender-mobile@1x.webp 1x, images/slider/lavender-mobile@2x.webp 2x">
+                  <source type="image/png" media="(min-width: 1440px)"
+                    srcset="images/slider/lavender-desktop@1x.png 1x, images/slider/lavender-desktop@2x.png 2x">
+                  <source type="image/png" media="(min-width: 768px)"
+                    srcset="images/slider/lavender-tablet@1x.png 1x, images/slider/lavender-tablet@2x.png 2x">
+                  <img class="slider__image" src="images/slider/lavender-mobile@1x.png" width="280" height="280"
+                    alt="Банка кофе Декаф Флэт Уайт." srcset="images/slider/lavender-mobile@2x.png 2x">
+                </picture>
+              </div>
+              <div class="slider__description-wrapper">
+                <p class="badge slider__badge">Новинка!</p>
+                <p class="slider__title">Лавандовый Латте</p>
+                <p class="slider__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+                  лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                <div class="slider__info-wrapper">
+                  <div class="slider__price-wrapper">
+                    <span class="slider__old-price">285₽</span>
+                    <span class="slider__new-price">265₽</span>
+                  </div>
+                  <a class="button slider__order-button" href="#">Заказать</a>
+                  <!-- класс для кнопки button- - disabled -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__slide slide-3">
+          <div class="container container--slider">
+            <div class="slider__wrapper">
+              <div class="slider__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="images/slider/espresso-desktop@1x.webp 1x, images/slider/espresso-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="images/slider/espresso-tablet@1x.webp 1x, images/slider/espresso-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="images/slider/espresso-mobile@1x.webp 1x, images/slider/espresso-mobile@2x.webp 2x">
+                  <source type="image/png" media="(min-width: 1440px)"
+                    srcset="images/slider/espresso-desktop@1x.png 1x, images/slider/espresso-desktop@2x.png 2x">
+                  <source type="image/png" media="(min-width: 768px)"
+                    srcset="images/slider/espresso-tablet@1x.png 1x, images/slider/espresso-tablet@2x.png 2x">
+                  <img class="slider__image" src="images/slider/espresso-mobile@1x.png" width="280" height="280"
+                    alt="Банка кофе Декаф Флэт Уайт." srcset="images/slider/espresso-mobile@2x.png 2x">
+                </picture>
+              </div>
+              <div class="slider__description-wrapper">
+                <p class="badge slider__badge">Новинка!</p>
+                <p class="slider__title">Тройной Эспрессо</p>
+                <p class="slider__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
+                  Колумбии покажет вам, что такое настоящая бодрость</p>
+                <div class="slider__info-wrapper">
+                  <div class="slider__price-wrapper">
+                    <span class="slider__old-price">395₽</span>
+                    <span class="slider__new-price">375₽</span>
+                  </div>
+                  <a class="button slider__order-button" href="#">Заказать</a>
+                  <!-- класс для кнопки button- - disabled -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="slider__button slider__button--prev slider-button-prev" type="button"
+          aria-label="Посмотреть предыдущий слайд">
+          <svg class="slider__button-icon slider__button-icon--prev" width="20" height="20" fill="#7859CF" role="img">
+            <use href="images/icons/stack.svg#prev-slide-button"></use>
+          </svg>
+        </button>
+        <button class="slider__button slider__button--next slider-button-next" type="button"
+          aria-label="Посмотреть следующий слайд">
+          <svg class="slider__button-icon slider__button-icon--next" width="20" height="20" fill="#7859CF" role="img">
+            <use href="images/icons/stack.svg#next-slide-button"></use>
+          </svg>
+        </button>
+        <div class="slider__pagination container container--slider slider-pagination">
+          <ul class="slider__pagination-list">
+            <li class="slider__pagination-item">
+              <a class="slider__pagination-link slider__pagination-link--active" href="#">
+                <span class="visually-hidden">1</span>
+              </a>
+            </li>
+            <li class="slider__pagination-item">
+              <a class="slider__pagination-link" href="#">
+                <span class="visually-hidden">2</span>
+              </a>
+            </li>
+            <li class="slider__pagination-item">
+              <a class="slider__pagination-link" href="#">
+                <span class="visually-hidden">3</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="features" data-test="features">
+      <div class="container">
+        <p class="badge features__badge">Преимущества</p>
+        <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
+        <ul class="features__list">
+          <li class="features__item features__item--speed">
+            <h3 class="features__subtitle">Скорость</h3>
+            <p class="features__description">Готовый напиток всегда под рукой — просто открой банку</p>
+          </li>
+          <li class="features__item features__item--fit">
+            <h3 class="features__subtitle">Удобство</h3>
+            <p class="features__description">Легко помещается и&nbsp;в&nbsp;карман,
+              и&nbsp;в&nbsp;маленькую сумочку</p>
+          </li>
+          <li class="features__item features__item--energy">
+            <h3 class="features__subtitle">Бодрость</h3>
+            <p class="features__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+          </li>
+          <li class="features__item features__item--eco">
+            <h3 class="features__subtitle">Экологичность</h3>
+            <p class="features__description">Вся упаковка сделана
+              из&nbsp;перерабатываемых материалов</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="catalog" data-test="catalog">
+      <div class="container">
+        <p class="badge catalog__badge">Каталог</p>
+        <h2 class="catalog__title">Каталог кофейных напитков</h2>
+        <div class="catalog__container">
+          <form class="catalog__filter" action="https://echo.htmlacademy.ru" method="get">
+            <div class="catalog__filter-wrapper">
+              <div class="catalog__price">
+                <label class="catalog__subtitle">Цена</label>
+                <div class="catalog__range-wrapper">
+                  <div class="catalog__range range-slider" id="price-range">
+                  </div>
+                </div>
+                <div class="catalog__number-wrapper">
+                  <label class="visually-hidden" for="input-min">От</label>
+                  <input class="catalog__price-input catalog__price-input--min" type="number" name="min-price"
+                    placeholder="0" id="input-min">
+                  <label class="visually-hidden" for="input-max">До</label>
+                  <input class="catalog__price-input catalog__price-input--max" type="number" name="max-price"
+                    placeholder="900" id="input-max">
+                </div>
+              </div>
+              <div class="catalog__milk">
+                <p class="catalog__subtitle">Наличие молока</p>
+                <ul class="catalog__filter-list">
+                  <li class="catalog__filter-item">
+                    <input class="catalog__control catalog__control--radio" type="radio" id="no-matter" name="milk"
+                      value="no-matter" checked>
+                    <label class="catalog__label" for="no-matter">Неважно</label>
+                  </li>
+                  <li class="catalog__filter-item">
+                    <input class="catalog__control catalog__control--radio" type="radio" id="animal-milk-only"
+                      name="milk" value="animal-milk-only">
+                    <label class="catalog__label" for="animal-milk-only">Только животное</label>
+                  </li>
+                  <li class="catalog__filter-item">
+                    <input class="catalog__control catalog__control--radio" type="radio" id="plant-milk-only"
+                      name="milk" value="plant-milk-only">
+                    <label class="catalog__label" for="plant-milk-only">Только растительное</label>
+                  </li>
+                  <li class="catalog__filter-item">
+                    <input class="catalog__control catalog__control--radio" type="radio" id="without-milk" name="milk"
+                      value="without-milk" disabled>
+                    <label class="catalog__label" for="without-milk">Без молока</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="catalog__country">
+                <p class="catalog__subtitle">Страна произрастания</p>
+                <ul class="catalog__filter-list">
+                  <li class="catalog__filter-item catalog__filter-item--checkbox">
+                    <input class="catalog__control catalog__control--checkbox" type="checkbox" id="brazil" name="brazil"
+                      checked>
+                    <label class="catalog__label catalog__label--checkbox" for="brazil">Бразилия</label>
+                  </li>
+                  <li class="catalog__filter-item">
+                    <input class="catalog__control catalog__control--checkbox" type="checkbox" id="ethiopia"
+                      name="ethiopia">
+                    <label class="catalog__label catalog__label--checkbox" for="ethiopia">Эфиопия</label>
+                  </li>
+                  <li class="catalog__filter-item">
+                    <input class="catalog__control catalog__control--checkbox" type="checkbox" id="colombia"
+                      name="colombia">
+                    <label class="catalog__label catalog__label--checkbox" for="colombia">Колумбия</label>
+                  </li>
+                  <li class="catalog__filter-item">
+                    <input class="catalog__control catalog__control--checkbox" type="checkbox" id="costa-rica"
+                      name="costa-rica">
+                    <label class="catalog__label catalog__label--checkbox" for="costa-rica">Коста-Рика</label>
+                  </li>
+                  <li class="catalog__filter-item">
+                    <input class="catalog__control catalog__control--checkbox" type="checkbox" id="peru" name="peru"
+                      disabled>
+                    <label class="catalog__label catalog__label--checkbox" for="peru">Перу</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalog__buttons-wrapper">
+              <button class="button catalog__filter-button" type="submit">Применить</button>
+              <button class="button button--reset catalog__reset-button" type="reset">Сбросить</button>
+            </div>
+          </form>
+          <div class="catalog__cards">
+            <div class="catalog__sort">
+              <p class="catalog__subtitle catalog__subtitle--sort">Сортировка:</p>
+              <select class="catalog__select-control" aria-label="Сортировка." name="sorting">
+                <option value="default">по умолчанию</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
+              </select>
+            </div>
+            <ul class="catalog__cards-list">
+              <li class="card catalog__cards-item">
+                <picture>
+                  <source type="image/webp"
+                    srcset="images/cards/coffee-can-1-mobile@1x.webp 1x, images/cards/coffee-can-1-mobile@2x.webp 2x">
+                  <img class="card__image" src="images/cards/coffee-can-1-mobile@1x.jpg" width="130" height="188"
+                    alt="Декаф Флэт Уайт." srcset="images/cards/coffee-can-1-mobile@2x.jpg 2x">
+                </picture>
+                <p class="card__title">Декаф Флэт Уайт</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии
+                  с&nbsp;натуральным фермерским молоком</p>
+                <div class="card__wrapper">
+                  <span class="card__price">225₽</span>
+                  <a class="button button--card card__button" href="#">В корзину</a>
+                </div>
+              </li>
+              <li class="card catalog__cards-item">
+                <picture>
+                  <source type="image/webp"
+                    srcset="images/cards/coffee-can-2-mobile@1x.webp 1x, images/cards/coffee-can-2-mobile@2x.webp 2x">
+                  <img class="card__image" src="images/cards/coffee-can-2-mobile@1x.jpg" width="130" height="188"
+                    alt="Декаф Флэт Уайт." srcset="images/cards/coffee-can-2-mobile@2x.jpg 2x">
+                </picture>
+                <p class="card__title">Декаф Флэт Уайт</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии
+                  с&nbsp;натуральным фермерским молоком</p>
+                <div class="card__wrapper">
+                  <span class="card__price">225₽</span>
+                  <a class="button button--card card__button" href="#">В корзину</a>
+                </div>
+              </li>
+              <li class="card catalog__cards-item">
+                <picture>
+                  <source type="image/webp"
+                    srcset="images/cards/coffee-can-3-mobile@1x.webp 1x, images/cards/coffee-can-3-mobile@2x.webp 2x">
+                  <img class="card__image" src="images/cards/coffee-can-3-mobile@1x.jpg" width="130" height="188"
+                    alt="Декаф Флэт Уайт." srcset="images/cards/coffee-can-3-mobile@2x.jpg 2x">
+                </picture>
+                <p class="card__title">Декаф Флэт Уайт</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии
+                  с&nbsp;натуральным фермерским молоком</p>
+                <div class="card__wrapper">
+                  <span class="card__price">225₽</span>
+                  <a class="button button--card card__button" href="#">В корзину</a>
+                </div>
+              </li>
+              <li class="card catalog__cards-item">
+                <picture>
+                  <source type="image/webp"
+                    srcset="images/cards/coffee-can-4-mobile@1x.webp 1x, images/cards/coffee-can-4-mobile@2x.webp 2x">
+                  <img class="card__image" src="images/cards/coffee-can-4-mobile@1x.jpg" width="130" height="188"
+                    alt="Декаф Флэт Уайт." srcset="images/cards/coffee-can-4-mobile@2x.jpg 2x">
+                </picture>
+                <p class="card__title">Декаф Флэт Уайт</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии
+                  с&nbsp;натуральным фермерским молоком</p>
+                <div class="card__wrapper">
+                  <span class="card__price">225₽</span>
+                  <a class="button button--card card__button" href="#">В корзину</a>
+                </div>
+              </li>
+              <li class="card catalog__cards-item">
+                <picture>
+                  <source type="image/webp"
+                    srcset="images/cards/coffee-can-5-mobile@1x.webp 1x, images/cards/coffee-can-5-mobile@2x.webp 2x">
+                  <img class="card__image" src="images/cards/coffee-can-5-mobile@1x.jpg" width="130" height="188"
+                    alt="Декаф Флэт Уайт." srcset="images/cards/coffee-can-5-mobile@2x.jpg 2x">
+                </picture>
+                <p class="card__title">Декаф Флэт Уайт</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии
+                  с&nbsp;натуральным фермерским молоком</p>
+                <div class="card__wrapper">
+                  <span class="card__price">225₽</span>
+                  <a class="button button--card card__button" href="#">В корзину</a>
+                </div>
+              </li>
+              <li class="card catalog__cards-item">
+                <picture>
+                  <source type="image/webp"
+                    srcset="images/cards/coffee-can-6-mobile@1x.webp 1x, images/cards/coffee-can-6-mobile@2x.webp 2x">
+                  <img class="card__image" src="images/cards/coffee-can-6-mobile@1x.jpg" width="130" height="188"
+                    alt="Декаф Флэт Уайт." srcset="images/cards/coffee-can-6-mobile@2x.jpg 2x">
+                </picture>
+                <p class="card__title">Декаф Флэт Уайт</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии
+                  с&nbsp;натуральным фермерским молоком</p>
+                <div class="card__wrapper">
+                  <span class="card__price">225₽</span>
+                  <a class="button button--card card__button" href="#">В корзину</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__pagination-wrapper">
+          <a class="catalog__pagination-link catalog__pagination-link--prev" href="#">
+            <svg class="catalog__pagination-arrow catalog__pagination-arrow--prev" width="10" height="10"
+              fill="#7859CF">
+              <use href="images/icons/stack.svg#pagination-arrow-prev"></use>
+            </svg>
+            <span class="visually-hidden">Предыдущая страница</span>
+            <span class="catalog__pagination-text">Назад</span>
+          </a>
+          <ul class="catalog__pagination-list">
+            <li class="catalog__pagination-item">
+              <a class="catalog__pagination-link" href="#">
+                1
+              </a>
+            </li>
+            <li class="catalog__pagination-item">
+              <a class="catalog__pagination-link catalog__pagination-link--current" href="#">
+                2
+              </a>
+            </li>
+            <li class="catalog__pagination-item">
+              <a class="catalog__pagination-link" href="#">
+                3
+              </a>
+            </li>
+          </ul>
+          <a class="catalog__pagination-link catalog__pagination-link--next" href="#">
+            <svg class="catalog__pagination-arrow catalog__pagination-arrow--next" width="10" height="10"
+              fill="#7859CF">
+              <use href="images/icons/stack.svg#pagination-arrow-next"></use>
+            </svg>
+            <span class="visually-hidden">Следующая страница</span>
+            <span class="catalog__pagination-text">Вперёд</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="map" data-test="map">
+      <picture>
+        <source type="image/webp" media="(min-width: 1440px)"
+          srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x">
+        <source type="image/png" media="(min-width: 1440px)"
+          srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x">
+        <source type="image/png" media="(min-width: 768px)"
+          srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x">
+        <img class="map__image" src="images/map-mobile@1x.png" width="320" height="420"
+          alt="Санкт-Петербург, набережная реки Карповки, дом 5." srcset="images/map-mobile@2x.png 2x">
+      </picture>
+    </div>
+  </main>
+
+  <footer class="footer" data-test="footer">
+    <div class="footer__container">
+      <div class="footer__divider">
+        <div class="footer__wrapper">
+          <div class="logo logo--footer footer__logo">
+            <a class="logo__link" href="#" aria-current="page">
+              <span class="logo__first-letter">D<span class="logo__letters">rink</span></span>
+              <img class="logo__image" src="./images/logo-mobile.svg" width="32" height="36" alt="Логотип Drink2go.">
+              <span class="logo__first-letter">G<span class="logo__letters">o</span></span>
+            </a>
+            <p class="logo__description">Интернет-магазин
+              кофейных напитков</p>
+          </div>
+          <ul class="socials footer__socials-list">
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+                <svg class="socials__icon" width="20" height="20" fill="#BDBDBD" role="img">
+                  <use href="images/icons/stack.svg#vk-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">Pinterest</span>
+                <svg class="socials__icon" fill="#BDBDBD" width="22" height="22" role="img">
+                  <use href="images/icons/stack.svg#pinterest-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">Одноклассники</span>
+                <svg class="socials__icon" width="20" height="20" fill="#BDBDBD" role="img">
+                  <use href="images/icons/stack.svg#ok-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="footer__navigation">
+        <div class="footer__divider">
+          <div class="footer__navigation-wrapper">
+            <p class="footer__title">Интернет-магазин</p>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Каталог</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Доставка</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Способы оплаты</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">О нас</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__divider">
+          <div class="footer__navigation-wrapper">
+            <p class="footer__title">Медиа</p>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Блог</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Информация для СМИ</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Правовая информация</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__divider">
+          <div class="footer__navigation-wrapper">
+            <p class="footer__title footer__title--contacts">Контакты</p>
+            <address class="footer__address">Санкт-Петербург, набережная реки Карповки, дом 5</address>
+            <a class="footer__tel" href="tel:+79999999999">+7 (999) 999-99-99</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__developers-wrapper">
+      <p class="footer__developer">Разработано в
+        <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <svg class="footer__developer-logo" width="12" height="16" fill="#BDBDBD" role="img">
+            <use href="images/icons/stack.svg#html-academy-logo"></use>
+          </svg>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="vendor/nouislider.js"></script>
+</body>
+
 </html>

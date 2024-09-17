@@ -1,0 +1,58 @@
+.button {
+  padding: 8px 20px;
+
+  font-family: $montserrat-font;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $base-primary;
+  color: $base-white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:not(:disabled):hover,
+.button:not(:disabled):focus-visible {
+  background-color: $alt-primary-lighter;
+}
+
+.button:not(:disabled):active {
+  background-color: $alt-primary-darker;
+}
+
+.button--reset {
+  background-color: $base-white;
+  color: $base-primary;
+}
+
+.button--reset:not(:disabled):hover,
+.button--reset:not(:disabled):focus-visible,
+.button--reset:not(:disabled):active {
+  color: $base-white;
+}
+
+.button--reset:disabled {
+  background-color: $alt-light-grey;
+}
+
+.button--disabled {
+  background-color: $base-grey;
+  cursor: default;
+}
+
+.button--card {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.button--card::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 16px;
+  margin-right: 6px;
+  background-image: url("../../images/icons/stack.svg#basket-card");
+  background-size: 20px 16px;
+}

@@ -1,5 +1,242 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  background-color: $base-white;
+  color: $base-black;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.header__main-container {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: start;
+  }
+}
+
+.header__logo {
+  @media (min-width: $tablet-width) {
+    margin-right: 67px;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 156px;
+  }
+}
+
+.header__menu {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 60px;
+  max-width: 250px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 130px;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 22px;
+    max-width: 280px;
+    min-width: 262px;
+  }
+}
+
+.header__link {
+  display: block;
+  min-width: 60px;
+  min-height: 60px;
+  padding: 22px 10px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 80px;
+    padding: 32px 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 8px;
+    padding: 32px 20px;
+    color: $base-black;
+  }
+}
+
+.header__link:hover,
+.header__link:focus-visible {
+  @media (min-width: $desktop-width) {
+    color: $base-primary;
+  }
+}
+
+.header__link:hover .header__icon,
+.header__link:focus-visible .header__icon {
+  fill: $base-primary;
+}
+
+.header__link:active {
+  background-color: $base-secondary;
+}
+
+.header__icon {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.header__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    text-transform: uppercase;
+  }
+}
+
+.header__burger {
+  display: inline-block;
+  width: 60px;
+  min-height: 60px;
+  margin-right: -20px;
+
+  border: none;
+  background-color: $base-white;
+  background-image: url("../../images/icons/stack.svg#close-icon");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__burger--closed {
+  background-image: url("../../images/icons/stack.svg#burger-icon");
+  background-size: 16px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__burger:active {
+  background-color: $base-secondary;
+}
+
+.header__navigation {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__navigation--mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__navigation--tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.header__navigation--closed {
+  display: none;
+}
+
+.header__navigation--opened {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  display: block;
+  z-index: 1;
+  background-color: $base-white;
+}
+
+.header__navigation-list {
+  @include list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
+}
+
+
+.header__navigation-item {
+  border-bottom: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.header__navigation-item:first-child {
+  border-top: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.header__navigation-wrapper {
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.header__navigation-link {
+  display: block;
+  padding: 18px 10px;
+  color: inherit;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 20px;
+    letter-spacing: 0.02em;
+  }
+}
+
+.header__navigation-link:hover,
+.header__navigation-link:focus {
+  @media (min-width: $tablet-width) {
+    color: $base-primary;
+  }
+}
+
+.header__navigation-link--current {
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $base-primary;
+    color: $base-primary;
+  }
+}
+
+.header__navigation-wrapper:active {
+  background-color: $base-secondary;
 }
